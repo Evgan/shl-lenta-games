@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c5400a9e-c89f-488a-88c9-43e0d3dc085d" name="37.140.192.178" url="http://37.140.192.178">
+        <fileTransfer host="37.140.192.178" port="21" rootFolder="/www/xn--80ahdl0asn3a.xn--p1ai/assets/gameshl/shl_lenta_games">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

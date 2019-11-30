@@ -14,9 +14,9 @@
     "typescript": "3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "react-app-rewired start --scripts-version react-scripts",
+    "build": "react-app-rewired build --scripts-version react-scripts",
+    "test": "react-app-rewired test --env=jsdom --scripts-version react-scripts",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -33,5 +33,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "react-app-rewire-css-modules": "github:codebandits/react-app-rewire-css-modules",
+    "react-app-rewired": "^2.1.5",
+    "sass-loader": "^8.0.0"
   }
 }
