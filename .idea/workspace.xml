@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4782f02-e334-4ac4-9bac-627c07c210e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/configureStore.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/saga.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/api.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ducks/games.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +101,7 @@
       <workItem from="1573221388522" duration="11161000" />
       <workItem from="1573830945699" duration="1197000" />
       <workItem from="1574801124032" duration="32220000" />
-      <workItem from="1575556608613" duration="6975000" />
+      <workItem from="1575556608613" duration="9592000" />
     </task>
     <task id="LOCAL-00001" summary="Environment progect">
       <created>1573556311403</created>
@@ -119,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575561846839</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add connect (saga, configureStore)">
+      <created>1575566426120</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575566426120</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +146,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Environment progect" />
     <MESSAGE value="add view games (before add connect)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add view games (before add connect)" />
+    <MESSAGE value="add connect (saga, configureStore)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add connect (saga, configureStore)" />
   </component>
 </project>
