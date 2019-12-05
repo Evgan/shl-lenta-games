@@ -1,5 +1,54 @@
-.conteiner {
-  width: 780px;
-  height: 180px;
-  background-color: cadetblue;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  .games {
+    overflow: hidden;
+    width: 1008px;
+    .gamesMove{
+      position: relative;
+      transition: transform .2s ease-in-out;
+      left: 0;
+      top: 0;
+      display: flex;
+    }
+  }
+
+  .btn {
+    cursor: pointer;
+    width: 64px;
+    height: 100%;
+    .btnIcon{
+      width: 50px;
+      height: 50px;
+      background-color: #1abbdb;
+      border-radius: 25px;
+      position: relative;
+      left: 7px;
+      top: 38px;
+
+      .toLeft{
+        width: 0;
+        height: 0;
+        border: 14px solid transparent;
+        border-right-color: #ffffff;
+        border-left: 0;
+        position: relative;
+        left: 14px;
+        top: 10px;
+      }
+
+      .toRight{
+        width: 0;
+        height: 0;
+        border: 14px solid transparent;
+        border-left-color: #ffffff;
+        border-right: 0;
+        position: relative;
+        left: 19px;
+        top: 10px;
+      }
+    }
+  }
 }

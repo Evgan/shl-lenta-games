@@ -11,7 +11,7 @@ class Lenta extends React.Component<Props>{
         const { testLenta } = this.props;
         console.log('----------------------- testGame = ', testLenta);
         return(
-            <div className={styles.conteiner}>
+            <div className={styles.container}>
                 <Games name="test glass Game"/>
             </div>
         )
