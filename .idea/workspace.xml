@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4782f02-e334-4ac4-9bac-627c07c210e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ducks/games.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/game/Game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/game/Game.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ducks/games.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ducks/games.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +103,7 @@
       <workItem from="1573221388522" duration="11161000" />
       <workItem from="1573830945699" duration="1197000" />
       <workItem from="1574801124032" duration="32220000" />
-      <workItem from="1575556608613" duration="9592000" />
+      <workItem from="1575556608613" duration="12954000" />
     </task>
     <task id="LOCAL-00001" summary="Environment progect">
       <created>1573556311403</created>
@@ -124,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575566426120</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add connect (duck games)">
+      <created>1575569642060</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575569642060</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +156,7 @@
     <MESSAGE value="Environment progect" />
     <MESSAGE value="add view games (before add connect)" />
     <MESSAGE value="add connect (saga, configureStore)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add connect (saga, configureStore)" />
+    <MESSAGE value="add connect (duck games)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add connect (duck games)" />
   </component>
 </project>

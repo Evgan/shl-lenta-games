@@ -1,10 +1,15 @@
 import * as React from 'react';
+import {connect} from "react-redux"
+import {dataGame} from '../../../ducks/games'
 import s from "./Games.module.scss"
 import getKey from '../../../Helpers/KeyHelper';
 import Game from './game/Game';
+import {ApplicationState} from '../../../redux/saga';
+import {getGamesRequest} from '../../../ducks/games'
 
 type Props = {
-    name: string
+    name: string;
+    getGamesRequest: () => void;
 }
 
 class Games extends React.Component<Props>{
@@ -18,7 +23,7 @@ class Games extends React.Component<Props>{
 
     componentDidMount() {
         console.log('----------------------- Games() > componentDidMount()');
-
+        this.props.getGamesRequest()
     }
 
     step = 168;
@@ -218,4 +223,20 @@ class Games extends React.Component<Props>{
     }
 }
 
-export default Games;
+
+const mapStateToProps = (store: ApplicationState) => {
+    return {
+        listGames: store.games.listGames
+    }
+};
+
+const mapDispatchToProps = (dispatch: any) => {
+    return{
+        getGamesRequest: () => dispatch(getGamesRequest())
+    }
+};
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Games);

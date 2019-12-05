@@ -3,9 +3,7 @@ import {Reducer} from 'redux'
 import {all, call, put, fork, takeEvery, delay, select} from 'redux-saga/effects'
 import {callApi} from '../utils/api'
 
-import config from '../../config.json'
-
-const {API_ENDPOINT} = config;
+const API_ENDPOINT = "http://www.streethockeyleague.ru";
 
 export interface dataGame extends ApiResponse{
     date: string,
@@ -45,7 +43,7 @@ export interface GamesState extends ApiResponse {
 // the expected return type of your API response.
 export type ApiResponse = Record<string, any>
 
-export const enum GamesActionTypes {
+export enum GamesActionTypes {
     GET_GAMES_REQUEST = '@@games/GET_GAMES_REQUEST',
     GET_GAMES_SUCCESS = '@@games/GET_GAMES_SUCCESS',
     GET_GAMES_FAIL = '@@games/GET_GAMES_FAIL'
