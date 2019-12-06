@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4782f02-e334-4ac4-9bac-627c07c210e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ducks/games.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ducks/games.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/dataTest.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/dataTest.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +99,7 @@
       <workItem from="1573221388522" duration="11161000" />
       <workItem from="1573830945699" duration="1197000" />
       <workItem from="1574801124032" duration="32220000" />
-      <workItem from="1575556608613" duration="27052000" />
+      <workItem from="1575556608613" duration="29927000" />
     </task>
     <task id="LOCAL-00001" summary="Environment progect">
       <created>1573556311403</created>
@@ -137,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575579218775</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="get list games from node">
+      <created>1575624343882</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1575624343882</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +168,7 @@
     <MESSAGE value="add connect (saga, configureStore)" />
     <MESSAGE value="add connect (duck games)" />
     <MESSAGE value="add connect (store to App.tsx)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add connect (store to App.tsx)" />
+    <MESSAGE value="get list games from node" />
+    <option name="LAST_COMMIT_MESSAGE" value="get list games from node" />
   </component>
 </project>
