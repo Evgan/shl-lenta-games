@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4782f02-e334-4ac4-9bac-627c07c210e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/game/Game.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/game/Game.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ducks/games.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ducks/games.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,7 +33,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -49,11 +46,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games0\src" />
       <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games0" />
+      <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games0\src" />
+      <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games0\src\ducks" />
       <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games0\src\components\lenta\games" />
       <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games\src\components\lenta" />
-      <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\projects\SHL\js-shl-lenta\shl-lenta-games\src\components\lenta" />
@@ -103,7 +100,7 @@
       <workItem from="1573221388522" duration="11161000" />
       <workItem from="1573830945699" duration="1197000" />
       <workItem from="1574801124032" duration="32220000" />
-      <workItem from="1575556608613" duration="12954000" />
+      <workItem from="1575556608613" duration="27052000" />
     </task>
     <task id="LOCAL-00001" summary="Environment progect">
       <created>1573556311403</created>
@@ -133,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575569642060</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add connect (store to App.tsx)">
+      <created>1575579218775</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1575579218775</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +161,7 @@
     <MESSAGE value="add view games (before add connect)" />
     <MESSAGE value="add connect (saga, configureStore)" />
     <MESSAGE value="add connect (duck games)" />
-    <option name="LAST_COMMIT_MESSAGE" value="add connect (duck games)" />
+    <MESSAGE value="add connect (store to App.tsx)" />
+    <option name="LAST_COMMIT_MESSAGE" value="add connect (store to App.tsx)" />
   </component>
 </project>

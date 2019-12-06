@@ -1,14 +1,14 @@
 import * as React from 'react';
 import {connect} from "react-redux"
-import {dataGame} from '../../../ducks/games'
 import s from "./Games.module.scss"
 import getKey from '../../../Helpers/KeyHelper';
 import Game from './game/Game';
 import {ApplicationState} from '../../../redux/saga';
-import {getGamesRequest} from '../../../ducks/games'
+import {getGamesRequest, dataGame} from '../../../ducks/games'
 
 type Props = {
     name: string;
+    listGames: dataGame[];
     getGamesRequest: () => void;
 }
 
@@ -43,164 +43,11 @@ class Games extends React.Component<Props>{
     render(){
         console.log('----------------------- moveDiv() > render()');
         console.log('----------------------- this.state.xPos = ', this.state.xPos);
-        const { name } = this.props;
+        const { name, listGames } = this.props;
         const transform = `translate3d(${this.state.xPos}px, 0px, 0px)`;
         console.log('----------------------- name = ', name);
-        const dataGames = [
-            {
-                levelGame: "Рег.чемпионат",
-                division: "Короли улиц",
-                iconDivision: "http://simpleicon.com/wp-content/uploads/cute.png",
-                date: "25.02.2018",
-                time: "16:00",
-                resultTeamHome: "5",
-                resultTeamGuest: "2",
-                teamHome: "ЛИАЗ",
-                teamGuest: "Арсенал Москва",
-                urlTeamHome: "http://www.streethockeyleague.ru/o-lige-shl/",
-                urlTeamGuest: "",
-                address: "Парк Легенд",
-                city: "Москва",
-                urlResult: "http://www.streethockeyleague.ru/statistika/?game=272",
-                urlAddress: ""
-            },
-            {
-                levelGame: "Плей-офф",
-                division: "Новые легенды",
-                iconDivision: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
-                date: "26.02.2018",
-                time: "17:00",
-                resultTeamHome: "",
-                resultTeamGuest: "",
-                teamHome: "МЕТЕОР",
-                teamGuest: "MIP",
-                urlTeamHome: "",
-                urlTeamGuest: "http://www.streethockeyleague.ru/o-lige-shl/",
-                address: "Сиреневый бул., 1, корп. 2",
-                city: "Москва",
-                urlAddress: "https://yandex.ru/maps/-/CGdzZ24H",
-                urlResult:""
-            },
-            {
-                levelGame: "Рег.чемпионат",
-                division: "Короли улиц",
-                iconDivision: "http://simpleicon.com/wp-content/uploads/cute.png",
-                date: "25.02.2018",
-                time: "16:00",
-                resultTeamHome: "5",
-                resultTeamGuest: "2",
-                teamHome: "ЛИАЗ",
-                teamGuest: "Арсенал Москва",
-                urlTeamHome: "",
-                urlTeamGuest: "",
-                address: "Парк Легенд",
-                city: "Москва",
-                urlAddress: "",
-                urlResult: ""
-            },
-            {
-                levelGame: "Плей-офф",
-                division: "Новые легенды",
-                iconDivision: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
-                date: "26.02.2018",
-                time: "17:00",
-                resultTeamHome: "",
-                resultTeamGuest: "",
-                teamHome: "МЕТЕОР",
-                teamGuest: "MIP",
-                urlTeamHome: "",
-                urlTeamGuest: "http://www.streethockeyleague.ru/o-lige-shl/",
-                address: "Сиреневый бул., 1, корп. 2",
-                city: "Москва",
-                urlAddress: "",
-                urlResult:""
-            },
-            {
-                levelGame: "Плей-офф",
-                division: "Новые легенды",
-                iconDivision: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
-                date: "26.02.2018",
-                time: "17:00",
-                resultTeamHome: "",
-                resultTeamGuest: "",
-                teamHome: "МЕТЕОР",
-                teamGuest: "MIP",
-                urlTeamHome: "",
-                urlTeamGuest: "http://www.streethockeyleague.ru/o-lige-shl/",
-                address: "Сиреневый бул., 1, корп. 2",
-                city: "Москва",
-                urlAddress: "https://yandex.ru/maps/-/CGdzZ24H",
-                urlResult:""
-            },
-            {
-                levelGame: "Плей-офф",
-                division: "Новые легенды",
-                iconDivision: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
-                date: "26.02.2018",
-                time: "17:00",
-                resultTeamHome: "",
-                resultTeamGuest: "",
-                teamHome: "МЕТЕОР",
-                teamGuest: "MIP",
-                urlTeamHome: "",
-                urlTeamGuest: "http://www.streethockeyleague.ru/o-lige-shl/",
-                address: "Сиреневый бул., 1, корп. 2",
-                city: "Москва",
-                urlAddress: "https://yandex.ru/maps/-/CGdzZ24H",
-                urlResult:""
-            },
-            {
-                levelGame: "Плей-офф",
-                division: "Новые легенды",
-                iconDivision: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
-                date: "26.02.2018",
-                time: "17:00",
-                resultTeamHome: "",
-                resultTeamGuest: "",
-                teamHome: "МЕТЕОР",
-                teamGuest: "MIP",
-                urlTeamHome: "",
-                urlTeamGuest: "http://www.streethockeyleague.ru/o-lige-shl/",
-                address: "Сиреневый бул., 1, корп. 2",
-                city: "Москва",
-                urlAddress: "https://yandex.ru/maps/-/CGdzZ24H",
-                urlResult:""
-            },
-            {
-                levelGame: "Плей-офф",
-                division: "Новые легенды",
-                iconDivision: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
-                date: "26.02.2018",
-                time: "17:00",
-                resultTeamHome: "",
-                resultTeamGuest: "",
-                teamHome: "МЕТЕОР",
-                teamGuest: "MIP",
-                urlTeamHome: "",
-                urlTeamGuest: "http://www.streethockeyleague.ru/o-lige-shl/",
-                address: "Сиреневый бул., 1, корп. 2",
-                city: "Москва",
-                urlAddress: "https://yandex.ru/maps/-/CGdzZ24H",
-                urlResult:""
-            },
-            {
-                levelGame: "Плей-офф",
-                division: "Новые легенды",
-                iconDivision: "https://upload.wikimedia.org/wikipedia/commons/6/6a/Godot_icon.svg",
-                date: "26.02.2018",
-                time: "17:00",
-                resultTeamHome: "",
-                resultTeamGuest: "",
-                teamHome: "МЕТЕОР",
-                teamGuest: "MIP",
-                urlTeamHome: "",
-                urlTeamGuest: "http://www.streethockeyleague.ru/o-lige-shl/",
-                address: "Сиреневый бул., 1, корп. 2",
-                city: "Москва",
-                urlAddress: "https://yandex.ru/maps/-/CGdzZ24H",
-                urlResult:""
-            }
-        ];
+        console.log('----------------------- listGames:');
+        console.log(listGames);
         return (
             <div className={s.container}>
                 <div className={s.btn} onClick={() => this.moveDiv(-1)} >
@@ -208,11 +55,13 @@ class Games extends React.Component<Props>{
                         <div className={s.toLeft} />
                     </div>
                 </div>
-                <div className={s.games}>
-                    <div id="gamesMove" className={s.gamesMove} style={{transform}}>
-                        {dataGames.map(dataGame => <Game key={getKey('Game')} dataGame={dataGame}/>)}
+                {listGames && (
+                    <div className={s.games}>
+                        <div id="gamesMove" className={s.gamesMove} style={{transform}}>
+                            {listGames.map(dataGame => <Game key={getKey('Game')} dataGame={dataGame}/>)}
+                        </div>
                     </div>
-                </div>
+                )}
                 <div className={s.btn} onClick={() => this.moveDiv(1)}>
                     <div className={s.btnIcon}>
                         <div className={s.toRight} />
