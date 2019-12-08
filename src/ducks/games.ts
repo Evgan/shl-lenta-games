@@ -1,9 +1,10 @@
 import {action} from 'typesafe-actions'
 import {Reducer} from 'redux'
-import {all, call, put, fork, takeEvery, delay, select} from 'redux-saga/effects'
+import {all, call, put, fork, takeEvery} from 'redux-saga/effects'
 import {callApi} from '../utils/api'
 
-const API_ENDPOINT = "http://www.streethockeyleague.ru";
+const API_ENDPOINT = "https://still-reef-23399.herokuapp.com";
+// const API_ENDPOINT = "http://www.streethockeyleague.ru";
 
 export interface dataGame extends ApiResponse{
     date: string,
@@ -23,8 +24,14 @@ export interface dataGame extends ApiResponse{
     levelGame: string
 }
 
+export interface serverTime extends ApiResponse{
+    dateNow: number,
+    date: string
+}
+
 export interface Games extends ApiResponse{
-    listGames: dataGame[]
+    listGames: dataGame[],
+    serverTime: serverTime,
 }
 
 export interface Errors extends ApiResponse {
@@ -37,6 +44,7 @@ export interface GamesState extends ApiResponse {
     success: boolean;
     error: boolean;
     errorMsg: string;
+    serverTime: serverTime
 }
 
 // This type is basically shorthand for `{ [key: string]: any }`. Feel free to replace `any` with
@@ -56,6 +64,10 @@ export const initialState: GamesState = {
     success: false,
     error: false,
     errorMsg: '',
+    serverTime: {
+        dateNow: 0,
+        date: ''
+    },
 };
 
 export const reducer: Reducer<GamesState> = (state = initialState, action) => {
@@ -77,7 +89,8 @@ export const reducer: Reducer<GamesState> = (state = initialState, action) => {
                 ...state,
                 isFetching: false,
                 success: true,
-                listGames: action.payload.listGames
+                listGames: action.payload.listGames,
+                serverTime: action.payload.serverTime,
             }
         }
 
@@ -102,12 +115,11 @@ export const reducer: Reducer<GamesState> = (state = initialState, action) => {
 
 
 export const getGamesRequest = () => action(GamesActionTypes.GET_GAMES_REQUEST);
-// export const getGamesSuccess = (values: Games) => action(GamesActionTypes.GET_GAMES_SUCCESS);
 export const getGamesSuccess = (values: Games) => action(GamesActionTypes.GET_GAMES_SUCCESS, values);
 export const getGamesFail = (message: string) => action(GamesActionTypes.GET_GAMES_FAIL, message);
 
 /**
- * получение
+ * получение списка игр
  * */
 function* getGamesSaga(action: any) {
     try {
@@ -157,7 +169,7 @@ function* getGamesSaga(action: any) {
         //const response = yield call(callApi, 'GET', API_ENDPOINT, '/sitefiles/flash/content/dataTest.json');
 
         //https://still-reef-23399.herokuapp.com/getListGamesJson
-        const response = yield call(callApi, 'GET', 'https://still-reef-23399.herokuapp.com', '/getListGamesJson');
+        const response = yield call(callApi, 'GET', API_ENDPOINT, '/getListGamesJson');
 
         // const response = yield call(callApi, 'GET', API_ENDPOINT, '/sitefiles/lentaJS/dataTest.json');
 
