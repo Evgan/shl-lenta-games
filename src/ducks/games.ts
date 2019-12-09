@@ -82,9 +82,6 @@ export const reducer: Reducer<GamesState> = (state = initialState, action) => {
         }
 
         case GamesActionTypes.GET_GAMES_SUCCESS: {
-            console.log('RRRRRRRRRRRRRRRRRR GET_GAMES_SUCCESS');
-            console.log('action.payload:');
-            console.log(action.payload);
             return {
                 ...state,
                 isFetching: false,
@@ -95,9 +92,6 @@ export const reducer: Reducer<GamesState> = (state = initialState, action) => {
         }
 
         case GamesActionTypes.GET_GAMES_FAIL: {
-            console.log('RRRRRRRRRRRRRRRRRR GET_GAMES_FAIL');
-            console.log('action.payload:');
-            console.log(action.payload);
             return {
                 ...state,
                 isFetching: false,
@@ -165,7 +159,6 @@ function* getGamesSaga(action: any) {
             })*/
 
 
-        console.log('SSSSSSSSSSSS getGamesSaga()');
         //const response = yield call(callApi, 'GET', API_ENDPOINT, '/sitefiles/flash/content/dataTest.json');
 
         //https://still-reef-23399.herokuapp.com/getListGamesJson
@@ -180,8 +173,6 @@ function* getGamesSaga(action: any) {
         }
 
     } catch (err) {
-        console.log('CATCH getGamesSaga()');
-
         if (err instanceof Error) {
             yield put(getGamesFail(err.stack!))
         } else {

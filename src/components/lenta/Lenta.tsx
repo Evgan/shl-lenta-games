@@ -9,7 +9,6 @@ type Props = {
 class Lenta extends React.Component<Props>{
     render(){
         const { testLenta } = this.props;
-        console.log('----------------------- testGame = ', testLenta);
         return(
             <div className={styles.container}>
                 <Games name="test glass Game"/>

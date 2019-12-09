@@ -19,6 +19,11 @@
     cursor: pointer;
     width: 64px;
     height: 100%;
+
+    &.disabled{
+      pointer-events: none;
+    }
+
     .btnIcon{
       width: 50px;
       height: 50px;
@@ -48,6 +53,10 @@
         position: relative;
         left: 19px;
         top: 10px;
+      }
+      &.disabled{
+        background-color: #c1d7db;
+        pointer-events: none;
       }
     }
   }
