@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4782f02-e334-4ac4-9bac-627c07c210e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lenta/Lenta.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/Lenta.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/Games.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/Games.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/Games.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/lenta/games/game/Game.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/lenta/games/game/Game.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ducks/games.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ducks/games.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +100,11 @@
       <workItem from="1573830945699" duration="1197000" />
       <workItem from="1574801124032" duration="32220000" />
       <workItem from="1575556608613" duration="29948000" />
-      <workItem from="1575760510358" duration="20003000" />
+      <workItem from="1575760510358" duration="20184000" />
+      <workItem from="1575957616262" duration="410000" />
+      <workItem from="1576158572466" duration="2457000" />
+      <workItem from="1577544178889" duration="1419000" />
+      <workItem from="1578580106275" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="Environment progect">
       <created>1573556311403</created>
@@ -162,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575819075637</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="disabled buttons">
+      <created>1575857530431</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1575857530431</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +196,7 @@
     <MESSAGE value="add connect (store to App.tsx)" />
     <MESSAGE value="get list games from node" />
     <MESSAGE value="set start position" />
-    <option name="LAST_COMMIT_MESSAGE" value="set start position" />
+    <MESSAGE value="disabled buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="disabled buttons" />
   </component>
 </project>
